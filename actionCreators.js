@@ -10,10 +10,14 @@ import types from './actionTypes'
 
 // Named Action ====================================================
 // -----------------------------------------------------------------
-export function namedAction (/*Args*/) {
+const namedAction = (/*Args*/)  => {
   // Do something
   return {
     type: types.VERB_NOUN,
     payload: {}
   }
+}
+
+export {
+  namedAction
 }
