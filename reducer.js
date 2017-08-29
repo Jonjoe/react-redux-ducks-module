@@ -36,8 +36,7 @@ export default reducer = (state = INITIAL_STATE, action) => {
         ...state,
         fetching: false,
         fetched: true,
-        collection: action.payload.data,
-        cache: cache
+        collection: action.payload.data
       }
 
     default:
