@@ -1,5 +1,5 @@
 /*
-  | Reducer for [Module] ===================================
+  | Reducer for [Module] ==========================================
   -----------------------------------------------------------------
   ...
 */
@@ -15,23 +15,22 @@ const INITIAL_STATE = {}
 
 // Reducer function ================================================
 // -----------------------------------------------------------------
-export default reducer = (state = INITIAL_STATE, action) => {
-  const resourceObj = {}
+export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case Types.FETCH_RESOURCE:
+    case types.FETCH_RESOURCE:
       return {
         ...state,
         fetching: true
       }
 
-    case Types.FETCH_RESOURCE_REJECTED:
+    case types.FETCH_RESOURCE_REJECTED:
       return {
         ...state,
         fetching: false,
         error: action.payload
       }
 
-    case Types.FETCH_RESOURCE_FULFILLED:
+    case types.FETCH_RESOURCE_FULFILLED:
       return {
         ...state,
         fetching: false,
