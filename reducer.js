@@ -1,7 +1,7 @@
 /*
   | Reducer for [Module] ==========================================
   -----------------------------------------------------------------
-  ...
+  [description]
 */
 
 // Base Imports ====================================================
@@ -14,7 +14,7 @@ const INITIAL_STATE = {}
 
 // Reducer function ================================================
 // -----------------------------------------------------------------
-export default (state = INITIAL_STATE, action) => {
+const reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case types.FETCH_RESOURCE:
       return {
@@ -40,4 +40,10 @@ export default (state = INITIAL_STATE, action) => {
     default:
       return state
   }
+}
+
+// Export Definition ===============================================
+// -----------------------------------------------------------------
+export {
+  reducer as default
 }
