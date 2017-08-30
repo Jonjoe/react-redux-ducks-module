@@ -7,7 +7,7 @@ Ducks is a design pattern for Redux based actionCreators, reducers and constants
 
  ```
  actionCreators.js       - Holds all exportable action creators.
- index.js                - Inports supporting code and exports the main reducer.
+ index.js                - Imports supporting code and exports the main reducer.
  reducer.js              - Defines the main reducer.
  actionTypes.js          - Defines Action Types and exports them.
  tests                   - Folder containing all jest tests.
