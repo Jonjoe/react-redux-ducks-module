@@ -6,8 +6,7 @@
 
 // Base Imports ====================================================
 // -----------------------------------------------------------------
-import types from './actionTypes'
-import actions from './actionCreators'
+import * as types from './actionTypes'
 
 // Definition for inital state =====================================
 // -----------------------------------------------------------------
