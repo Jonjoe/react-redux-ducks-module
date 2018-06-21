@@ -6,24 +6,24 @@
 
 // Base Imports ====================================================
 // -----------------------------------------------------------------
-import * as actions from '../actionCreators'
-import * as types from '../actionTypes'
+import * as actions from "../actionCreators";
+import * as types from "../actionTypes";
 
 // Tests ===========================================================
 // -----------------------------------------------------------------
 
-describe('[module] actions', () => {
-  it('should construct an action when VERB_NOUN is called.', () => {
+describe("[module] actions", () => {
+  it("should construct an action when VERB_NOUN is called.", () => {
     // test initial conditions
-    const payload = {}
+    const payload = {};
 
     // test expectations
     const expectedAction = {
-      type: types.VERB_NOUN,
+      type: types.FETCH_RESOURCE,
       payload
-    }
+    };
 
     // test statement
-    expect(actions.addTodo()).toEqual(expectedAction)
-  })
-})
+    expect(actions.addTodo()).toEqual(expectedAction);
+  });
+});

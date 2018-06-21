@@ -6,20 +6,18 @@
 
 // Base Imports ====================================================
 // -----------------------------------------------------------------
-import * as types from './actionTypes'
+import * as types from "./actionTypes";
 
 // Named Action ====================================================
 // -----------------------------------------------------------------
-const namedAction = (/*Args*/)  => {
+const namedAction = (/*Args*/) => {
   // Do something
   return {
-    type: types.VERB_NOUN,
+    type: types.FETCH_RESOURCE,
     payload: {}
-  }
-}
+  };
+};
 
 // Export Definition ===============================================
 // -----------------------------------------------------------------
-export {
-  namedAction
-}
+export { namedAction };

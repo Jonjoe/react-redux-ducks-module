@@ -6,43 +6,34 @@
 
 // Base Imports ====================================================
 // -----------------------------------------------------------------
-import * as types from './actionTypes';
-
-// Type Definitions ================================================
-// -----------------------------------------------------------------
-export interface State {}
-
-export interface CustomError {}
-
-export interface DataPoint {
-  _id: number;
-  __v: number;
-}
-
-export interface Action {
-  type: string;
-  data?: DataPoint[]; 
-  error?: Error; 
-}
+import * as types from "./actionTypes";
+import { IState, IAction } from "./interfaces";
 
 // Initial State for reducer =======================================
 // -----------------------------------------------------------------
-export const INITIAL_STATE: State = {};
+export const INITIAL_STATE: IState = {
+  fetching: true,
+  fetched: true,
+  collection: [],
+  error: ""
+};
 
 // Reducer function ================================================
 // -----------------------------------------------------------------
-const reducer = (state: State = INITIAL_STATE, action: Action) => {
+const reducer = (state: IState = INITIAL_STATE, action: IAction): IState => {
   switch (action.type) {
     case types.FETCH_RESOURCE:
       return {
         ...state,
-        fetching: true
+        fetching: true,
+        fetched: false
       };
 
     case types.FETCH_RESOURCE_REJECTED:
       return {
         ...state,
         fetching: false,
+        fetched: false,
         error: action.error
       };
 
@@ -51,6 +42,7 @@ const reducer = (state: State = INITIAL_STATE, action: Action) => {
         ...state,
         fetching: false,
         fetched: true,
+        error: "",
         collection: action.data
       };
 
@@ -61,6 +53,4 @@ const reducer = (state: State = INITIAL_STATE, action: Action) => {
 
 // Export Definition ===============================================
 // -----------------------------------------------------------------
-export {
-  reducer as default
-};
+export { reducer as default };
