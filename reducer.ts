@@ -7,7 +7,7 @@
 // Base Imports
 // -----------------------------------------------------------------
 import * as types from "./actionTypes";
-import { IState, IAction } from "./interfaces";
+import { IState, IActions } from "./interfaces";
 
 // Initial State for reducer
 // -----------------------------------------------------------------
@@ -20,7 +20,7 @@ export const INITIAL_STATE: IState = {
 
 // Reducer function
 // -----------------------------------------------------------------
-const reducer = (state: IState = INITIAL_STATE, action: IAction): IState => {
+const reducer = (state: IState = INITIAL_STATE, action: IActions): IState => {
   switch (action.type) {
     case types.FETCH_RESOURCE:
       return {
