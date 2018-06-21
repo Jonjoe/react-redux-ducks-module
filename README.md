@@ -6,7 +6,7 @@ Ducks is a design pattern for Redux based actionCreators, reducers and constants
 
 ```
 actionCreators.ts       - Holds all exportable action creators.
-index.ts                - Imports supporting code and exports the main reducer.
+index.ts                - Exports code used externally (reducer, actions etc).
 interfaces.ts           - Defines all the modules interfaces
 reducer.ts              - Defines the main reducer.
 actionTypes.ts          - Defines Action Types and exports them.

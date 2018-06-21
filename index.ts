@@ -1,5 +1,4 @@
-import reducer from './reducer'
+import reducer from "./reducer";
+import * as actions from "./actionCreators";
 
-export {
-  reducer as default
-}
+export { reducer as default, actions };
