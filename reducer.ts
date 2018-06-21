@@ -1,15 +1,15 @@
 /*
-  | Reducer for [Module] ===========================================
+  | Reducer for [Module] 
   ------------------------------------------------------------------
   [description]
 */
 
-// Base Imports ====================================================
+// Base Imports
 // -----------------------------------------------------------------
 import * as types from "./actionTypes";
 import { IState, IAction } from "./interfaces";
 
-// Initial State for reducer =======================================
+// Initial State for reducer
 // -----------------------------------------------------------------
 export const INITIAL_STATE: IState = {
   fetching: true,
@@ -18,7 +18,7 @@ export const INITIAL_STATE: IState = {
   error: ""
 };
 
-// Reducer function ================================================
+// Reducer function
 // -----------------------------------------------------------------
 const reducer = (state: IState = INITIAL_STATE, action: IAction): IState => {
   switch (action.type) {
@@ -51,6 +51,6 @@ const reducer = (state: IState = INITIAL_STATE, action: IAction): IState => {
   }
 };
 
-// Export Definition ===============================================
+// Export Definition
 // -----------------------------------------------------------------
 export { reducer as default };
